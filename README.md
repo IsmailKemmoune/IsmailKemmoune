@@ -1,4 +1,4 @@
-# Hi there, I'm Ismail Kemmoune - aka Viyen <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="10px" alt="hi">
+# Hi there, I'm Ismail Kemmoune - aka Viyen <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="5px" alt="hi">
 
 
 <!-- <img width="38%" align="left" height="50%" src="https://user-images.githubusercontent.com/67396878/152384717-78b16127-0435-41fe-ba44-15f1756e57c6.png" /> -->
