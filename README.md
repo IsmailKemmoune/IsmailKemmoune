@@ -2,7 +2,7 @@
 
 
 <!-- <img width="38%" align="left" height="50%" src="https://user-images.githubusercontent.com/67396878/152384717-78b16127-0435-41fe-ba44-15f1756e57c6.png" /> -->
-<img width="98%"  src="https://user-images.githubusercontent.com/67396878/152386290-25b4002c-6d38-4fe9-b89b-8d35f887d8fd.png" />
+
 <img align="left" width="47%" src="https://github-readme-stats.vercel.app/api?username=IsmailKemmoune&show_icons=true&theme=radical&bg_color=2A2734&icon_color=FFCC99&text_color=9A86FD&title_color=FFAD5C" />
 <img align="left" width="47%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=IsmailKemmoune&layout=compact&bg_color=2A2734&text_color=9A86FD&title_color=FFAD5C"/>
 
