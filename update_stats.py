@@ -17,22 +17,22 @@ def get_enhanced_stats():
         if repo["language"] and repo["language"] not in ["Python", "C"]:
             lang_stats[repo["language"]] += repo["stargazers_count"] + 1
     
-    # Generate aligned bars (15 chars max)
-    def bar(percent):
-        filled = '█' * int(percent / 6.67)  # Scale to 15 chars for 100%
-        return f"{filled.ljust(15)}"
+    # Calculate total stars
+    total_stars = sum(lang_stats.values())
     
-    # Build output
-    stats = "## GitHub Analytics\n\n"
-    stats += "### Weekly Activity\n"
+    # Generate HTML table
+    stats = "### GitHub Analytics\n\n"
+    stats += "#### Weekly Activity\n"
     stats += "- **Total Dev Time:** 180m  \n"
     stats += "- **Project Focus:** Web Dev  \n"
     stats += "- **Productivity Streak:** 2 days  \n\n"
     
-    stats += "### Language Usage\n"
+    stats += "#### Language Usage\n"
+    stats += "| Language     | Usage      | % Share |\n"
+    stats += "|--------------|------------|---------|\n"
     for lang, count in sorted(lang_stats.items(), key=lambda x: -x[1]):
-        percent = int(count / sum(lang_stats.values()) * 100)
-        stats += f"| {lang.ljust(10)} | {bar(percent)} {percent}% |\n"
+        percent = int(count / total_stars * 100)
+        stats += f"| {lang.ljust(12)} | {'█' * (percent // 6)}{'.' * (15 - (percent // 6))} | {percent:3}% |\n"
     
     return stats
 
