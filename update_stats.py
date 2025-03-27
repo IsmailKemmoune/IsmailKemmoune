@@ -1,71 +1,60 @@
-import os 
+import os
 import requests
 from collections import defaultdict
 from datetime import datetime, timedelta
 
-# GitHub API setup
-GITHUB_USERNAME = "IsmailKemmoune"  # Replace with your GitHub username
-TOKEN = os.getenv("GITHUB_TOKEN")  # GitHub token (auto-injected by Actions)
+# GitHub API Setup
+GITHUB_USERNAME = "IsmailKemmoune"
+TOKEN = os.getenv("GITHUB_TOKEN")
+headers = {"Authorization": f"token {TOKEN}"}
 
-headers = {
-    "Authorization": f"token {TOKEN}",
-    "Accept": "application/vnd.github.v3+json"
-}
-
-# Fetch commit activity (last 7 days)
-def get_commit_activity():
-    url = f"https://api.github.com/users/{GITHUB_USERNAME}/events/public"
-    response = requests.get(url, headers=headers)
-    events = response.json()
+def get_enhanced_stats():
+    # Fetch data
+    repos = requests.get(f"https://api.github.com/users/{GITHUB_USERNAME}/repos", headers=headers).json()
+    events = requests.get(f"https://api.github.com/users/{GITHUB_USERNAME}/events", headers=headers).json()
     
-    commit_counts = defaultdict(int)
-    days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-    
-    for event in events:
-        if event["type"] == "PushEvent":
-            date = datetime.strptime(event["created_at"], "%Y-%m-%dT%H:%M:%SZ").weekday()
-            commit_counts[days[date]] += 1
-    
-    total_commits = sum(commit_counts.values())
-    active_days = [day for day, count in commit_counts.items() if count > 0]
-    
-    # Generate bar (scale to 10 chars for simplicity)
-    bar_length = int(total_commits / 5)  # Adjust divisor for scaling
-    bar = '█' * min(bar_length, 10) + '░' * (10 - min(bar_length, 10))
-    
-    return f"**GitHub Activity Stats**  \nLast 7 Days: {bar} {total_commits} commits  \nActive Days: {', '.join(active_days)}"
-
-# Fetch top languages
-def get_top_languages():
-    url = f"https://api.github.com/users/{GITHUB_USERNAME}/repos?per_page=100"
-    repos = requests.get(url, headers=headers).json()
-    
+    # Process languages
     lang_stats = defaultdict(int)
     for repo in repos:
         if repo["language"]:
-            lang_stats[repo["language"]] += 1
+            lang_stats[repo["language"]] += repo["stargazers_count"] + 1  # Weight by stars
     
-    total = sum(lang_stats.values())
-    stats_text = "**Top Languages**  \n"
+    # Process activity
+    commits_last_week = sum(1 for event in events if event["type"] == "PushEvent")
+    starred_repos = len([event for event in events if event["type"] == "WatchEvent"])
     
+    # Generate bars (20 chars max)
+    def bar(percent):
+        filled = '█' * int(percent / 5)
+        return f"{filled.ljust(20)} {percent}%"
+    
+    # Build output
+    stats = "### GitHub Analytics  \n\n"
+    stats += f"**Weekly Coding Pulse**  \n"
+    stats += f"`🌐 Total Dev Time`: {commits_last_week * 45}m  \n"  # Approx 45min per commit
+    stats += f"`📌 Project Focus`: {'Web Dev' if 'JavaScript' in lang_stats else 'Other'}  \n"
+    stats += f"`🚀 Productivity Streak`: {min(7, commits_last_week // 2)} days  \n\n"
+    
+    stats += "**Language Radar**  \n"
     for lang, count in sorted(lang_stats.items(), key=lambda x: -x[1]):
-        percent = count / total * 100
-        bar = '█' * int(percent // 10) + '░' * (10 - int(percent // 10))
-        stats_text += f"{lang.ljust(12)} {bar} {int(percent)}%  \n"
+        percent = int(count / sum(lang_stats.values()) * 100)
+        stats += f"{lang.ljust(12)} {bar(percent)}  \n"
     
-    return stats_text
+    stats += "\n**Highlights**  \n"
+    stats += f"`⭐ Starred Repos`: {starred_repos}  \n"
+    stats += f"`🤝 PRs Merged`: {len([e for e in events if e.get('payload', {}).get('action') == 'closed' and 'pull_request' in e.get('payload', {})])}  \n"
+    stats += f"`🐛 Issues Closed`: {len([e for e in events if e.get('payload', {}).get('action') == 'closed' and 'issue' in e.get('payload', {})]}  \n"
+    
+    return stats
 
 # Update README
 def update_readme():
-    stats_section = f"{get_commit_activity()}\n\n{get_top_languages()}"
-    
     with open("README.md", "r") as f:
         readme = f.read()
     
-    # Replace placeholder
     updated_readme = readme.replace(
         "<!--START_STATS-->", 
-        f"<!--START_STATS-->\n{stats_section}\n<!--END_STATS-->"
+        f"<!--START_STATS-->\n{get_enhanced_stats()}\n<!--END_STATS-->"
     )
     
     with open("README.md", "w") as f:
