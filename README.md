@@ -38,4 +38,17 @@
 - Advanced coursework in strategic management, analytics, and consulting frameworks.  
 
 <!--START_STATS-->
+## GitHub Analytics
+
+### Weekly Activity
+- **Total Dev Time:** 180m  
+- **Project Focus:** Web Dev  
+- **Productivity Streak:** 2 days  
+
+### Language Usage
+| JavaScript | █████████       66% |
+| CSS        | ██              19% |
+| HTML       | █               10% |
+| TypeScript |                 4% |
+
 <!--END_STATS-->
