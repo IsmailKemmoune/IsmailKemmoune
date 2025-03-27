@@ -4,10 +4,6 @@
 > /'iz.mayl 'keh.moohn/ *(Ismail Kemmoune)*  
 > /'vee.en/ *(Viyen)*  
 
-### Bio
-
-🚀 Not all heroes wear capes—some just git push 
-
 ### Tech Stack
 
 #### Frontend Development
@@ -41,40 +37,5 @@
 📍 *Moroccan National School of Business and Management, Settat* | 2017 – 2020  
 - Advanced coursework in strategic management, analytics, and consulting frameworks.  
 
-### Stats
 <!--START_STATS-->
-### GitHub Analytics  
-
-**Weekly Activity**  
-🌐 Total Dev Time: 180m  
-📌 Project Focus: Web Dev  
-🚀 Productivity Streak: 2 days  
-
-**Language Usage**  
-JavaScript   ████████████         60%  
-CSS          ███                  17%  
-HTML         █                    9%  
-Python                            4%  
-C                                 4%  
-TypeScript                        4%  
-
-**Recent Achievements**  
-⭐ Starred Repos: 1  
-🤝 PRs Merged: 0  
-🐛 Issues Closed: 0  
-
-<!--END_STATS-->
-**GitHub Activity Stats**  
-Last 7 Days: ░░░░░░░░░░ 4 commits  
-Active Days: Tue
-
-**Top Languages**  
-JavaScript   █████░░░░░ 52%  
-CSS          █░░░░░░░░░ 17%  
-TypeScript   █░░░░░░░░░ 13%  
-HTML         ░░░░░░░░░░ 8%  
-Python       ░░░░░░░░░░ 4%  
-C            ░░░░░░░░░░ 4%  
-
-<!--END_STATS-->
 <!--END_STATS-->
