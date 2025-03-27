@@ -43,4 +43,17 @@
 
 ### Stats
 <!--START_STATS-->
+**GitHub Activity Stats**  
+Last 7 Days: ░░░░░░░░░░ 4 commits  
+Active Days: Tue
+
+**Top Languages**  
+JavaScript   █████░░░░░ 52%  
+CSS          █░░░░░░░░░ 17%  
+TypeScript   █░░░░░░░░░ 13%  
+HTML         ░░░░░░░░░░ 8%  
+Python       ░░░░░░░░░░ 4%  
+C            ░░░░░░░░░░ 4%  
+
+<!--END_STATS-->
 <!--END_STATS-->
