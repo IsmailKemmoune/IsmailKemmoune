@@ -30,20 +30,20 @@ def get_enhanced_stats():
     
     # Build output
     stats = "### GitHub Analytics  \n\n"
-    stats += f"**Weekly Coding Pulse**  \n"
-    stats += f"`🌐 Total Dev Time`: {commits_last_week * 45}m  \n"  # Approx 45min per commit
-    stats += f"`📌 Project Focus`: {'Web Dev' if 'JavaScript' in lang_stats else 'Other'}  \n"
-    stats += f"`🚀 Productivity Streak`: {min(7, commits_last_week // 2)} days  \n\n"
+    stats += f"**Weekly Activity**  \n"
+    stats += f"🌐 Total Dev Time: {commits_last_week * 45}m  \n"
+    stats += f"📌 Project Focus: {'Web Dev' if 'JavaScript' in lang_stats else 'Other'}  \n"
+    stats += f"🚀 Productivity Streak: {min(7, commits_last_week // 2)} days  \n\n"
     
-    stats += "**Language Radar**  \n"
+    stats += "**Language Usage**  \n"
     for lang, count in sorted(lang_stats.items(), key=lambda x: -x[1]):
         percent = int(count / sum(lang_stats.values()) * 100)
         stats += f"{lang.ljust(12)} {bar(percent)}  \n"
     
-    stats += "\n**Highlights**  \n"
-    stats += f"`⭐ Starred Repos`: {starred_repos}  \n"
-    stats += f"`🤝 PRs Merged`: {len([e for e in events if e.get('payload', {}).get('action') == 'closed' and 'pull_request' in e.get('payload', {})])}  \n"
-    stats += f"`🐛 Issues Closed`: {len([e for e in events if e.get('payload', {}).get('action') == 'closed' and 'issue' in e.get('payload', {})]}  \n"
+    stats += "\n**Recent Achievements**  \n"
+    stats += f"⭐ Starred Repos: {starred_repos}  \n"
+    stats += f"🤝 PRs Merged: {len([e for e in events if e.get('payload', {}).get('action') == 'closed' and 'pull_request' in e.get('payload', {})])}  \n"
+    stats += f"🐛 Issues Closed: {len([e for e in events if e.get('payload', {}).get('action') == 'closed' and 'issue' in e.get('payload', {})])}  \n"
     
     return stats
 
