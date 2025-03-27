@@ -1,50 +1,46 @@
-# Hi there, I'm Ismail Kemmoune - aka Viyen 
+# Hi there, I'm **Ismail Kemmoune** (aka **Viyen**)  
 
+### Pronunciation  
+> /'iz.mayl 'keh.moohn/ *(Ismail Kemmoune)*  
+> /'vee.en/ *(Viyen)*  
 
-<!-- <img width="38%" align="left" height="50%" src="https://user-images.githubusercontent.com/67396878/152384717-78b16127-0435-41fe-ba44-15f1756e57c6.png" /> -->
+### Bio
 
-<img align="left" width="47%" src="https://github-readme-stats.vercel.app/api?username=IsmailKemmoune&show_icons=true&theme=radical&bg_color=2A2734&icon_color=FFCC99&text_color=9A86FD&title_color=FFAD5C" />
-<img align="left" width="47%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=IsmailKemmoune&layout=compact&bg_color=2A2734&text_color=9A86FD&title_color=FFAD5C"/>
+🚀 Not all heroes wear capes—some just git push 
 
-<br/>
-<h2>Languages and Tools:</h2>
+### Tech Stack
 
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />][javascript]
+#### Frontend Development
+![JavaScript](https://skillicons.dev/icons?i=js) ![TypeScript](https://skillicons.dev/icons?i=ts) ![React](https://skillicons.dev/icons?i=react) ![Next.js](https://skillicons.dev/icons?i=nextjs) ![Redux](https://skillicons.dev/icons?i=redux) ![HTML](https://skillicons.dev/icons?i=html) ![CSS](https://skillicons.dev/icons?i=css) ![Sass](https://skillicons.dev/icons?i=sass) ![Tailwind](https://skillicons.dev/icons?i=tailwind) ![StyledComponents](https://skillicons.dev/icons?i=styledcomponents)
 
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />][html]
+#### Backend Development
+![Node.js](https://skillicons.dev/icons?i=nodejs) ![Express](https://skillicons.dev/icons?i=expressjs) ![GraphQL](https://skillicons.dev/icons?i=graphql)
 
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />][css]
+#### Databases & ORMs
+![MongoDB](https://skillicons.dev/icons?i=mongodb) ![Supabase](https://skillicons.dev/icons?i=supabase) ![Prisma](https://skillicons.dev/icons?i=prisma)
 
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />][nodejs]
+#### Deployment & DevOps
+![Vercel](https://skillicons.dev/icons?i=vercel) ![Git](https://skillicons.dev/icons?i=git) ![Grafana](https://skillicons.dev/icons?i=grafana) ![GrafDockerana](https://skillicons.dev/icons?i=docker)
 
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />][reactjs]
+#### Tools
+![VS Code](https://skillicons.dev/icons?i=vscode) ![Postman](https://skillicons.dev/icons?i=postman) ![Notion](https://skillicons.dev/icons?i=notion)
 
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" />][nextjs]
+### Work experience
+| Job Position                  | Company                    | Field                         | Work Period       |
+| ----------------------------- | -------------------------- | ----------------------------- | ----------------- |
+| **Frontend Engineer** | **Avito.ma - Frontier Digital Ventures** | **Marketplace**    | **Jun 2023 - Present** |
+| Frontend Engineer       | FinaMaze                | Fintech                 | Aug 2022 - Jun 2023 |
 
-[<img width="60px" height="40px" align="left" src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/logo/logo-colored.svg" />][chakra]
+### Education  
+**Computer Science**  
+📍 *1337 Coding School (42 Network)* | 2021 – 2023  
+- Peer-to-peer learning, project-based curriculum.  
+- Focused on algorithms, systems programming, and software development.  
 
-[<img width="30px" height="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />][tailwind]
+**Master’s Degree, Management Engineering & Business Consulting**  
+📍 *Moroccan National School of Business and Management, Settat* | 2017 – 2020  
+- Advanced coursework in strategic management, analytics, and consulting frameworks.  
 
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />][expressjs]
-
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />][git]
-
-[<img width="40px" align="left" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />][c]
-
-<br />
-<br />
-
-<!--- TOOLS LINKS -->
-
-[javascript]: https://www.javascript.com/ 'javascript'
-[html]: https://developer.mozilla.org/en-US/docs/Web/HTML 'html'
-[css]: https://developer.mozilla.org/en-US/docs/Web/CSS 'css'
-[nodejs]: https://nodejs.org/en/ 'nodejs'
-[reactjs]: https://reactjs.org/ 'reactjs'
-[nextjs]: https://nextjs.org/ 'nextjs'
-[chakra]: https://chakra-ui.com/ 'chakra'
-[tailwind]: https://tailwindcss.com/ 'tailwind'
-[expressjs]: https://expressjs.com/ 'expressjs'
-[git]: https://git-scm.com/ 'git'
-[c]: https://en.wikipedia.org/wiki/C_(programming_language)
-
+### Stats
+<!--START_STATS-->
+<!--END_STATS-->
